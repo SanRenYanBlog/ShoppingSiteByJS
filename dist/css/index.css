@@ -16,6 +16,8 @@
         position: relative; }
         .top .topLeft ul li:hover {
           color: #FF734D; }
+          .top .topLeft ul li:hover div {
+            display: block; }
         .top .topLeft ul li:first-child {
           margin-left: 0px; }
         .top .topLeft ul li:nth-child(2):hover, .top .topLeft ul li:nth-child(3):hover {
@@ -63,7 +65,9 @@
           display: inline-block;
           transform: rotate(90deg); }
         .top .topRight ul .serve:hover div {
-          color: #71797F; }
+          color: #71797F;
+          display: block;
+          background-color: #fff; }
         .top .topRight ul .serve div {
           display: none;
           position: absolute;
@@ -77,3 +81,233 @@
             text-align: center; }
             .top .topRight ul .serve div p:hover {
               color: #FF734D; }
+
+.headerMain .headerTop {
+  height: 120px; }
+  .headerMain .headerTop .logo {
+    float: left;
+    height: 120px;
+    width: 240px; }
+  .headerMain .headerTop .search {
+    margin-top: 24px;
+    width: 540px;
+    padding-left: 140px;
+    float: left; }
+    .headerMain .headerTop .search .searchInp {
+      margin-bottom: 10px;
+      width: 440px;
+      height: 40px;
+      background: url("../image/header-inp.jpg") no-repeat left 20px center;
+      float: left;
+      font-size: 16px;
+      text-indent: 50px;
+      border: 2px solid #FF673F;
+      border-radius: 25px; }
+      .headerMain .headerTop .search .searchInp::-webkit-input-placeholder {
+        color: #BBBABF; }
+    .headerMain .headerTop .search .searchBtn {
+      width: 120px;
+      height: 44px;
+      float: left;
+      background-color: #FF673F;
+      color: #ffffff;
+      font-size: 20px;
+      margin-left: -120px;
+      font-weight: 700;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer; }
+    .headerMain .headerTop .search .keyWords {
+      clear: both;
+      margin-left: 40px;
+      color: #BBBABF; }
+      .headerMain .headerTop .search .keyWords span {
+        cursor: pointer;
+        padding: 0 10px; }
+        .headerMain .headerTop .search .keyWords span:hover {
+          color: #FF673F; }
+  .headerMain .headerTop .service {
+    width: 280px;
+    height: 120px;
+    margin-top: -12px;
+    float: left; }
+    .headerMain .headerTop .service p {
+      float: left;
+      font-size: 14px;
+      line-height: 120px;
+      text-align: left;
+      vertical-align: middle; }
+      .headerMain .headerTop .service p:first-child {
+        margin-right: 50px; }
+      .headerMain .headerTop .service p img {
+        vertical-align: middle;
+        margin-right: 10px; }
+
+.headerBottom {
+  height: 52px; }
+  .headerBottom .headerBottomClassify {
+    clear: left;
+    float: left;
+    height: 52px;
+    width: 240px;
+    background: url("../image/header-classify.jpg") no-repeat center; }
+  .headerBottom .headerBottomNav ul {
+    float: left;
+    margin-left: 25px; }
+  .headerBottom .headerBottomNav li {
+    float: left; }
+    .headerBottom .headerBottomNav li a {
+      line-height: 52px;
+      color: #232628;
+      font-size: 20px;
+      padding: 0 10px;
+      font-weight: 700; }
+      .headerBottom .headerBottomNav li a:hover {
+        color: #FF734C; }
+    .headerBottom .headerBottomNav li:last-child a {
+      color: #FF734C; }
+
+.banner {
+  position: relative;
+  clear: both;
+  height: 480px; }
+  .banner .imgA {
+    height: 480px;
+    width: 100%;
+    opacity: 0;
+    background: url("../image/ban1.jpg") no-repeat center 0;
+    background-size: cover;
+    position: absolute;
+    z-index: -1; }
+  .banner .imgB {
+    height: 480px;
+    width: 100%;
+    opacity: 0;
+    background: url("../image/ban2.jpg") no-repeat center 0;
+    background-size: cover;
+    position: absolute;
+    z-index: -1; }
+  .banner .imgC {
+    height: 480px;
+    width: 100%;
+    opacity: 0;
+    background: url("../image/ban3.jpg") no-repeat center 0;
+    background-size: cover;
+    position: absolute;
+    z-index: -1; }
+  .banner .center .bannerMenu {
+    color: #FFF;
+    float: left;
+    width: 240px;
+    height: 480px;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .banner .center .bannerMenu .menuA, .banner .center .bannerMenu .menuB, .banner .center .bannerMenu .menuC, .banner .center .bannerMenu .menuD, .banner .center .bannerMenu .menuE {
+      border-bottom: 1px dashed rgba(200, 200, 200, 0.3);
+      padding-left: 22px;
+      padding-bottom: 12px; }
+    .banner .center .bannerMenu .menuC, .banner .center .bannerMenu .menuD, .banner .center .bannerMenu .menuE {
+      cursor: pointer;
+      position: relative; }
+      .banner .center .bannerMenu .menuC span, .banner .center .bannerMenu .menuD span, .banner .center .bannerMenu .menuE span {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        font-family: '宋体';
+        font-size: 16px;
+        user-select: none; }
+      .banner .center .bannerMenu .menuC:hover, .banner .center .bannerMenu .menuD:hover, .banner .center .bannerMenu .menuE:hover {
+        background-color: #FFF; }
+        .banner .center .bannerMenu .menuC:hover h2, .banner .center .bannerMenu .menuD:hover h2, .banner .center .bannerMenu .menuE:hover h2 {
+          color: #232628; }
+        .banner .center .bannerMenu .menuC:hover p > a, .banner .center .bannerMenu .menuD:hover p > a, .banner .center .bannerMenu .menuE:hover p > a {
+          color: #71797F; }
+          .banner .center .bannerMenu .menuC:hover p > a:hover, .banner .center .bannerMenu .menuD:hover p > a:hover, .banner .center .bannerMenu .menuE:hover p > a:hover {
+            color: #FF734C; }
+        .banner .center .bannerMenu .menuC:hover .menuCMore, .banner .center .bannerMenu .menuC:hover .menuDMore, .banner .center .bannerMenu .menuC:hover .menuEMore, .banner .center .bannerMenu .menuD:hover .menuCMore, .banner .center .bannerMenu .menuD:hover .menuDMore, .banner .center .bannerMenu .menuD:hover .menuEMore, .banner .center .bannerMenu .menuE:hover .menuCMore, .banner .center .bannerMenu .menuE:hover .menuDMore, .banner .center .bannerMenu .menuE:hover .menuEMore {
+          display: block;
+          z-index: 100; }
+    .banner .center .bannerMenu .menuCMore {
+      width: 960px;
+      height: 478px;
+      background-color: #fff;
+      position: absolute;
+      left: 240px;
+      top: -225px;
+      display: none; }
+    .banner .center .bannerMenu .menuDMore {
+      width: 960px;
+      height: 478px;
+      background-color: #fff;
+      position: absolute;
+      left: 240px;
+      top: -302px;
+      display: none; }
+    .banner .center .bannerMenu .menuEMore {
+      width: 960px;
+      height: 478px;
+      background-color: #fff;
+      position: absolute;
+      left: 240px;
+      top: -403px;
+      display: none; }
+  .banner .center h2 {
+    padding-top: 16px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 700; }
+  .banner .center p {
+    font-size: 14px;
+    line-height: 24px;
+    float: left;
+    padding-right: 10px; }
+    .banner .center p a {
+      color: white; }
+      .banner .center p a:hover {
+        color: #FF673F; }
+
+.banner:hover .bantoLeft, .banner:hover .bantoRight {
+  display: block; }
+
+.banner .center {
+  position: relative;
+  overflow: hidden; }
+
+.banner .bantoLeft, .banner .bantoRight {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(30, 30, 30, 0.3);
+  color: white;
+  font-size: 38px;
+  font-family: '宋体';
+  text-align: center;
+  line-height: 50px;
+  top: 240px;
+  margin-top: -25px;
+  display: none;
+  z-index: 10; }
+
+.banner .bantoLeft {
+  left: 250px; }
+
+.banner .bantoRight {
+  right: 10px; }
+
+.banner .banDotts {
+  position: absolute;
+  cursor: pointer;
+  left: 600px;
+  bottom: 20px;
+  z-index: 10; }
+  .banner .banDotts span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: rgba(20, 20, 20, 0.3); }
+  .banner .banDotts .checked {
+    background-color: #FF734C; }

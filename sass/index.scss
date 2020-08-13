@@ -16,6 +16,9 @@
                 position: relative;
                 &:hover{
                     color: #FF734D;
+                    div{
+                        display: block;
+                    }
                 }
                 &:first-child{
                     margin-left: 0px;
@@ -80,6 +83,8 @@
                 }
                 &:hover div{
                     color: #71797F;
+                    display: block;
+                    background-color: #fff;
                 }
                 div{
                     display: none;
@@ -102,3 +107,285 @@
     }
 }
 //header头部css样式
+.headerMain{
+    .headerTop{
+        height: 120px;
+        .logo{
+            float: left;
+            height: 120px;
+            width: 240px;
+        }
+        .search{
+            margin-top: 24px;
+            width: 540px;
+            padding-left: 140px;
+            float: left;
+            .searchInp{
+                margin-bottom: 10px;
+                width: 440px;
+                height: 40px;
+                background: url('../image/header-inp.jpg') no-repeat left 20px center;
+                float: left;
+                font-size: 16px;
+                text-indent: 50px;
+                border: 2px solid #FF673F;
+                border-radius: 25px;
+                &::-webkit-input-placeholder{
+                    color: #BBBABF;
+                }
+            }
+            .searchBtn{
+                width: 120px;
+                height: 44px;
+                float: left;
+                background-color: #FF673F;
+                color: #ffffff;
+                font-size: 20px;
+                margin-left: -120px;
+                font-weight: 700;
+                border-radius: 25px;
+                border: none;
+                cursor: pointer;
+            }
+            .keyWords{
+                clear: both;
+                margin-left: 40px;
+                color: #BBBABF;
+                span{
+                    cursor: pointer;
+                    padding: 0 10px;
+                    &:hover{
+                        color: #FF673F;
+                    }
+                }
+            }
+        }
+        .service{
+            width:280px;
+            height: 120px;
+            margin-top: -12px;
+            float: left;
+            p{
+                float: left;
+                font-size: 14px;;
+                line-height: 120px;
+                text-align: left;
+                vertical-align: middle;
+                &:first-child{
+                    margin-right: 50px;
+                }
+                img{
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+.headerBottom{
+    height: 52px;
+    .headerBottomClassify{
+        clear: left;
+        float: left;
+        height: 52px;
+        width: 240px;
+        background: url('../image/header-classify.jpg') no-repeat center;
+    }
+    .headerBottomNav{
+        ul{
+            float: left;
+            margin-left: 25px;
+        }
+        li{
+            float: left;
+            a{
+                line-height: 52px;
+                color: #232628;
+                font-size: 20px;
+                padding: 0 10px;
+                font-weight: 700;
+                &:hover{
+                    color: #FF734C;
+                }
+            }
+            &:last-child a{
+                color:#FF734C;
+            }
+        }
+    }
+}
+
+//首页banner css样式
+.banner{
+    position: relative;
+    clear: both;
+    height: 480px;
+    .imgA{
+        height: 480px;
+        width: 100%;
+        opacity: 0;
+        background: url('../image/ban1.jpg') no-repeat center 0;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+    }
+    .imgB{
+        height: 480px;
+        width: 100%;
+        opacity: 0;
+        background: url('../image/ban2.jpg') no-repeat center 0;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+    }
+    .imgC{
+        height: 480px;
+        width: 100%;
+        opacity: 0;
+        background: url('../image/ban3.jpg') no-repeat center 0;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+    }
+    .center{
+        .bannerMenu{
+            color: #FFF;
+            float: left;
+            width: 240px;
+            height: 480px;
+            background-color: rgba(0, 0, 0,0.3);
+            .menuA,.menuB,.menuC,.menuD,.menuE{
+                border-bottom: 1px dashed rgba(200, 200, 200,0.3);
+                padding-left: 22px;
+                padding-bottom: 12px;
+                // overflow: hidden;
+            }
+            .menuC,.menuD,.menuE{
+                cursor: pointer;
+                position: relative;
+                span{
+                    position: absolute;
+                    right: 30px;
+                    top: 20px;
+                    font-family: '宋体';
+                    font-size: 16px;
+                    user-select: none;
+                }
+                &:hover{
+                    background-color: #FFF;
+                    h2{
+                        color: #232628;
+                    }
+                    p>a{
+                        color: #71797F;
+                        &:hover{
+                            color: #FF734C;
+                        }
+                    }
+                    .menuCMore,.menuDMore,.menuEMore{
+                        display: block;
+                        z-index: 100;
+                    }
+                }
+            }
+            .menuCMore{
+                width: 960px;
+                height: 478px;
+                background-color: #fff;
+                position: absolute;
+                left: 240px;
+                top: -225px;
+                display: none;
+            }
+            .menuDMore{
+                width: 960px;
+                height: 478px;
+                background-color: #fff;
+                position: absolute;
+                left: 240px;
+                top: -302px;
+                display: none;
+            }
+            .menuEMore{
+                width: 960px;
+                height: 478px;
+                background-color: #fff;
+                position: absolute;
+                left: 240px;
+                top: -403px;
+                display: none;
+            }
+        }
+        h2{
+            padding-top: 16px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            float: left;
+            padding-right: 10px;
+            a{
+                color: white;
+                &:hover{
+                    color: #FF673F;
+                }
+            }
+        }
+    }
+}
+//banner  按钮样式
+.banner{
+    &:hover .bantoLeft,&:hover .bantoRight{
+        display: block;
+    }
+    .center{
+        position: relative;
+        overflow: hidden;
+    }
+    .bantoLeft,.bantoRight{
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(30, 30, 30,0.3);
+        color: white;
+        font-size: 38px;
+        font-family: '宋体';
+        text-align: center;
+        line-height: 50px;
+        top: 240px;
+        margin-top: -25px;
+        display: none;
+        z-index: 10;
+    }
+    .bantoLeft{
+        left: 250px;
+    }
+    .bantoRight{
+        right: 10px;
+    }
+    .banDotts{
+        position: absolute;
+        cursor: pointer;
+        left: 600px;
+        bottom: 20px;
+        z-index: 10;
+        span{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 10px;
+            background-color: rgba(20, 20, 20,0.3);
+        }
+        .checked{
+            background-color: #FF734C;
+        }
+    }
+
+}
