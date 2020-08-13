@@ -1,108 +1,104 @@
-// 变量
-$width:100px;
-$color:red;
-$num:50%*10;
-// $num:50*10px;
-// sass支持的单行注释，这个注释不会被编译到css文件中
-/* 
-  多行注释
-  这个注释会被编译到css文件中
-*/
-h1{
-  color: blue;
-  // font-size: $num2; 访问不到
-}
-.box{
-  $num2:20px;
-  width: $width;
-  height: 50px;
-  p{
-    width: $num;
-    font-size: $num2;
-    color: $color;
-    background-color: #ccc;
-  }
-}
-
-// 嵌套语法
-// 父选择器的标识符 &
-.show{
-  color: red;
-  text-align: center;
-}
-.wrap{
-  width: 1000px;
-  margin: auto;
-  .header{
-    height: 80px;
-    background-color: #ccc;
-    .title{
-      @extend .show;
-    }
-  }
-  .main{
-    height: 300px;
-    background-color: pink;
-    &-title{
-      @extend .show;
-    }
-    &-content{
-      text-align: center;
-      a{
-        color: red;
-        &:hover{
-          color: yellow;
+//top部分css样式
+.top{
+    background-color: #F3F5F7;
+    height: 40px;
+    font-size: 12px;
+    color: #71797F;
+    .topLeft{
+        float: left;
+        ul{
+            float: left;
+            li{
+                float: left;
+                line-height: 40px;
+                padding: 0 15px;
+                cursor: pointer;
+                position: relative;
+                &:hover{
+                    color: #FF734D;
+                }
+                &:first-child{
+                    margin-left: 0px;
+                }
+                &:nth-child(2):hover,&:nth-child(3):hover{
+                    background-color: #fff;
+                }
+                img{
+                    margin: 0px 3px -1px 3px;
+                }
+                div{
+                    position: absolute;
+                    left: -1px;
+                    top: 40px;
+                    width: 160px;
+                    height: 180px;
+                    border: 1px solid #F3F5F7;
+                    border-top: none;
+                    display: none;
+                }
+            }
         }
-        &:visited{
-          color: #999;
+    }
+    .topRight{
+        float: right;
+        ul{
+            float: left;
+            li{
+                float: left;
+                line-height: 40px;
+                padding: 0 15px;
+                cursor: pointer;
+                &:hover{
+                    color: #FF734D;
+                }
+                &:last-child{
+                    cursor: auto;
+                    margin-right: 0;
+                }
+                &:last-child:hover{
+                    color: #71797F;
+                }
+                &:nth-child(4):hover{
+                    background-color: #fff;
+                    span{
+                        transition: 0.2s;
+                        transform:rotate(270deg);
+                    }
+                }
+            }
+            .shopCar span{
+                color: #FE7FA2;
+            }
+            .serve{
+                position: relative;
+                span{
+                    font-family: '楷体';
+                    margin-left: 3px;
+                    font-weight: 700;
+                    display: inline-block;
+                    transform:rotate(90deg);
+                }
+                &:hover div{
+                    color: #71797F;
+                }
+                div{
+                    display: none;
+                    position: absolute;
+                    left: -1px;
+                    right: -1px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: 1px solid #F3F5F7;
+                    border-top: none;
+                    p{
+                        text-align: center;
+                        &:hover{
+                            color: #FF734D;
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
-  .footer{
-    height: 100px;
-    background-color: #ddd;
-    h2{
-      @extend .show;//继承
-    }
-    @import './list';
-  }
 }
-
-// 引入外部sass文件
-// @import './list.scss';
-@import './list';
-
-// 混合 @mixin
-@mixin common{
-  list-style: none;
-  li{
-    color: blue;
-    font-size: 20px;
-  }
-}
-@mixin test ($width,$color){// 传参
-  list-style: none;
-  overflow: hidden;
-  li{
-    float: left;
-    width: $width;
-    height: 100px;
-    margin-left: 20px;
-    background-color: $color;
-  }
-}
-.list{
-  // @include common;
-  @include test(200px,blue);
-  @if 5>3 {border: 4px solid #ccc;}
-  @if 5<3 {border: 4px solid red;}
-}
-
-@for $i from 1 through 4 {
-  .li-#{$i} {
-    width: $i*50px;
-  }
-}
-
-
+//header头部css样式

@@ -1,0 +1,10 @@
+.clearFloat::after {
+  content: '.';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both; }
+
+.center {
+  width: 1200px;
+  margin: 0 auto; }
