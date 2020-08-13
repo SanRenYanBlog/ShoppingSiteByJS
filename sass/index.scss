@@ -1,0 +1,108 @@
+// 变量
+$width:100px;
+$color:red;
+$num:50%*10;
+// $num:50*10px;
+// sass支持的单行注释，这个注释不会被编译到css文件中
+/* 
+  多行注释
+  这个注释会被编译到css文件中
+*/
+h1{
+  color: blue;
+  // font-size: $num2; 访问不到
+}
+.box{
+  $num2:20px;
+  width: $width;
+  height: 50px;
+  p{
+    width: $num;
+    font-size: $num2;
+    color: $color;
+    background-color: #ccc;
+  }
+}
+
+// 嵌套语法
+// 父选择器的标识符 &
+.show{
+  color: red;
+  text-align: center;
+}
+.wrap{
+  width: 1000px;
+  margin: auto;
+  .header{
+    height: 80px;
+    background-color: #ccc;
+    .title{
+      @extend .show;
+    }
+  }
+  .main{
+    height: 300px;
+    background-color: pink;
+    &-title{
+      @extend .show;
+    }
+    &-content{
+      text-align: center;
+      a{
+        color: red;
+        &:hover{
+          color: yellow;
+        }
+        &:visited{
+          color: #999;
+        }
+      }
+    }
+  }
+  .footer{
+    height: 100px;
+    background-color: #ddd;
+    h2{
+      @extend .show;//继承
+    }
+    @import './list';
+  }
+}
+
+// 引入外部sass文件
+// @import './list.scss';
+@import './list';
+
+// 混合 @mixin
+@mixin common{
+  list-style: none;
+  li{
+    color: blue;
+    font-size: 20px;
+  }
+}
+@mixin test ($width,$color){// 传参
+  list-style: none;
+  overflow: hidden;
+  li{
+    float: left;
+    width: $width;
+    height: 100px;
+    margin-left: 20px;
+    background-color: $color;
+  }
+}
+.list{
+  // @include common;
+  @include test(200px,blue);
+  @if 5>3 {border: 4px solid #ccc;}
+  @if 5<3 {border: 4px solid red;}
+}
+
+@for $i from 1 through 4 {
+  .li-#{$i} {
+    width: $i*50px;
+  }
+}
+
+
