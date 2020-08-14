@@ -1,0 +1,349 @@
+//top部分css样式
+.top {
+    background-color: #f2f2f2;
+    min-width: 1200px;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    color: #71797F;
+
+    .topLeft {
+        float: left;
+
+        ul {
+            float: left;
+
+            li {
+                float: left;
+                line-height: 40px;
+                padding: 0 15px;
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    color: #FF734D;
+
+                    div {
+                        display: block;
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0px;
+                }
+
+                &:nth-child(2):hover,
+                &:nth-child(3):hover {
+                    background-color: #fff;
+                }
+
+                img {
+                    margin: 0px 3px -1px 3px;
+                }
+
+                div {
+                    position: absolute;
+                    left: -1px;
+                    top: 40px;
+                    width: 160px;
+                    height: 180px;
+                    border: 1px solid #F3F5F7;
+                    border-top: none;
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .topRight {
+        float: right;
+
+        ul {
+            float: left;
+
+            li {
+                float: left;
+                line-height: 40px;
+                padding: 0 15px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #FF734D;
+                }
+
+                &:last-child {
+                    cursor: auto;
+                    margin-right: 0;
+                }
+
+                &:last-child:hover {
+                    color: #71797F;
+                }
+
+                &:nth-child(4):hover {
+                    background-color: #fff;
+
+                    span {
+                        transition: 0.2s;
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+
+            .shopCar span {
+                color: #FE7FA2;
+            }
+
+            .serve {
+                position: relative;
+
+                span {
+                    font-family: '楷体';
+                    margin-left: 3px;
+                    font-weight: 700;
+                    display: inline-block;
+                    transform: rotate(90deg);
+                }
+
+                &:hover div {
+                    color: #71797F;
+                    display: block;
+                    background-color: #fff;
+                }
+
+                div {
+                    display: none;
+                    position: absolute;
+                    left: -1px;
+                    right: -1px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: 1px solid #F3F5F7;
+                    border-top: none;
+                    z-index: 10;
+                    p {
+                        text-align: center;
+
+                        &:hover {
+                            color: #FF734D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//header CSS样式
+.header {
+    height: 120px;
+
+    .logo {
+        float: left;
+        width: 500px;
+
+    }
+
+    .search {
+        float: left;
+        padding: 40px 0px;
+        width: 460px;
+
+        .searchKey {
+            float: left;
+            width: 236px;
+            height: 28px;
+            border: 1px solid #FF6A00;
+            text-indent: 5px;
+        }
+
+        .searchBtn {
+            float: left;
+            width: 84px;
+            height: 32px;
+            line-height: 30px;
+            border: 1px solid #FF6A00;
+            background-color: #FF6A00;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .service {
+        padding: 35px 0px 45px 0px;
+        font-size: 12px;
+        color: #737373;
+
+        p {
+            float: left;
+            line-height: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+
+            img {
+                vertical-align: middle;
+                margin: 0 10px;
+            }
+
+            &:hover {
+                color: #FF6A00;
+            }
+        }
+    }
+}
+
+.main {
+    background: url('../image/login.jpg') no-repeat center center;
+    height: 480px;
+    min-width: 1200px;
+    width: 100%;
+    &>.center {
+        position: relative;
+        .tabs {
+            position: absolute;
+            width: 360px;
+            height: 440px;
+            background-color: #fff;
+            border-radius: 15px;
+            right: 0;
+            top: 30px;
+            .tabsHead{
+                height: 50px;
+                border-bottom: 1px solid #e9ecf0;
+                span{
+                    display: inline-block;
+                    border-bottom: 2px solid transparent;
+                    padding: 24px 5px 0px;
+                    height: 24px;
+                    font-size: 18px;
+                    color: #232628;
+                    margin-left: 53px;
+                    cursor: pointer;
+                }
+                .loginTabs{
+                    border-bottom: 2px solid #FF734C;
+                    color: #FF734C;
+                }
+            }
+            .tabsMain{
+                height: 310px;
+                padding: 18px 24px;
+                .loginMain{
+                    
+                    .username{
+                        text-indent: 5px;
+                        font-size: 16px;
+                        text-indent: 5px;
+                        width: 310px;
+                        height: 32px;
+                        border: 1px solid #e9ecf0;
+                        margin-bottom: 26px;
+                    }
+                    .userpwd{
+                        text-indent: 5px;
+                        font-size: 16px;
+                        width: 310px;
+                        height: 32px;
+                        border: 1px solid #e9ecf0;
+                        margin-bottom: 26px;
+                    }
+                    .loginBtn{
+                        width: 310px;
+                        height: 48px;
+                        color: #fff;
+                        background-color: #FF734C;
+                        border: none;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                    p{
+                        cursor: pointer;
+                        text-align: center;
+                        color: #71797F;
+                        margin-top: 20px;
+                    }
+                }
+                .registerMain{
+                    display: none;
+                    .username{
+                        text-indent: 5px;
+                        font-size: 16px;
+                        width: 310px;
+                        height: 32px;
+                        border: 1px solid #e9ecf0;
+                        margin-bottom: 26px;
+                    }
+                    .userpwd{
+                        text-indent: 5px;
+                        font-size: 16px;
+                        width: 310px;
+                        height: 32px;
+                        border: 1px solid #e9ecf0;
+                        margin-bottom: 26px;
+                    }
+                    .registerBtn{
+                        width: 310px;
+                        height: 48px;
+                        color: #fff;
+                        background-color: #FF734C;
+                        border: none;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                }
+            }
+           .tabsAbove{
+               background-color: #F7F9FA;
+               height: 30px;
+               padding: 10px 30px;
+               span{
+                   cursor: pointer;
+                   img{
+                       vertical-align: middle;
+                       margin: 8px;
+                   }
+                   &:hover{
+                       color: #19ADF5;
+                   }
+               }
+           } 
+
+        }
+    }
+}
+
+//bottom css样式
+.bottom{
+    .btmNav{
+        padding:34px 0;
+        p{
+            float: left;
+            a{
+                font-size: 12px;
+                color: #737373;
+                border-right: 2px solid #e9e0d9;
+                padding:0 36px
+            }
+            &:last-child a{
+                border-right: none;
+            }
+        }
+    }
+    .btmImg{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        img{
+            height: 50px;
+        }
+    }
+    .btnText{
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 16px;
+        font-size: 12px;
+        color: #737373;
+    }
+}
