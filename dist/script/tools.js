@@ -110,3 +110,12 @@ function delAllCookie() {
             });
     }
 }
+//判断cookie是否存在 如果存在提取用户名
+function judgeCookie(){
+    let data = document.cookie;
+    if(data.length>0){
+        return data.split('=')[0];
+    }else{
+        return null;
+    }
+}

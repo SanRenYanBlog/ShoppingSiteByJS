@@ -1,0 +1,67 @@
+ul {
+	padding: 0;
+}
+.tm-m-photos,  .tm-m-photos-thumb {
+	zoom: 1;
+}
+.tm-m-photos-thumb {
+	list-style-type: none;
+}
+.tm-m-photos-thumb li {
+	float: left;
+	border: 2px solid #f2f2f2;
+	padding: 2px;
+	margin-right: 8px;
+	position: relative;
+	transition: border-color .2s ease-out;
+}
+.tm-m-photos-thumb img {
+	cursor: url(https://img02.hua.com/pc/assets/img/img-zoom-in.png), url(https://assets.alicdn.com/img/common/zoom_in.cur), auto;
+}
+.tm-m-photo-viewer, .tm-m-photo-viewer img,  .tm-m-photos-thumb .tm-current img {
+	cursor: url(https://img02.hua.com/pc/assets/img/img-zoom-out.png), url(https://assets.alicdn.com/img/common/zoom_out.cur), auto;
+}
+.tm-m-photo-viewer {
+	position: relative;
+	background: #F7F9FA;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	display: none;
+	transition: all 0.2s ease-in;
+}
+.tm-m-photo-viewer-navleft,  .tm-m-photo-viewer-navright {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 30%;
+	background: url(https://assets.alicdn.com/s.gif); /*解决IE 下背景透明的空白元素无法触发 click 和 hover 事件*/
+}
+.tm-m-photo-viewer-navleft {
+	left: 0;
+}
+.tm-m-photo-viewer-navright {
+	right: 0;
+}
+.tm-m-photo-viewer-navleft i,  .tm-m-photo-viewer-navright i{
+	position: absolute;
+	display: none;
+	top: 50%;
+	width: 36px;
+	height: 36px;
+	margin-top:-18px;
+	border-radius: 50%;
+	background-color: #fff;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-shadow:0px 2px 6px 0px rgba(222,226,229,1);
+}
+.tm-m-photo-viewer-navleft i{
+	left: 8px;
+	background-image: url(https://img02.hua.com/pc/pimg/aboutus/swiper_arrow_left.png);
+}
+.tm-m-photo-viewer-navright i{
+	right: 8px;
+	background-image: url(https://img02.hua.com/pc/pimg/aboutus/swiper_arrow_right.png);
+}

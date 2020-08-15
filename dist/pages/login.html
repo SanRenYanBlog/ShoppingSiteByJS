@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/clear.css">
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/login.css">
-    <script src="../script/tools.js" defer='defer'></script>
-    <script src="../script/login.js" defer='defer'></script>
+    <script src="../script/login.js" async></script>
+    <script src="../script/tools.js" async></script>
 </head>
 
 <body>
@@ -79,20 +79,18 @@
                     <span class="registerTabs">新人注册账号</span>
                 </div>
                 <div class="tabsMain">
-                    <form action="#">
-                        <div class="loginMain">
-                            <input type="text" placeholder="请输入你的账号" class="username">
-                            <input type="password"  placeholder="请输入你的密码" class="userpwd">
-                            <input type="submit" value="登录" class="loginBtn">
-                            <p>忘记密码？</p>
-                        </div>
-                        <div class="registerMain">
-                            <input type="text"  placeholder="请输入你的账号" class="username">
-                            <input type="password"  placeholder="请输入你的密码" class="userpwd">
-                            <input type="password"  placeholder="请再次输入密码" class="userpwd">
-                            <input type="submit"  value="注册" class="registerBtn">
-                        </div>
-                    </form>
+                    <div class="loginMain">
+                        <input type="text" name="" id="" placeholder="请输入你的账号" class="username">
+                        <input type="password" name="" id="" placeholder="请输入你的密码" class="userpwd">
+                        <input type="button" name="" id="" value="登录" class="loginBtn">
+                        <p>忘记密码？</p>
+                    </div>
+                    <div class="registerMain">
+                        <input type="text" name="" id="" placeholder="请输入你的账号" class="username">
+                        <input type="password" name="" id="" placeholder="请输入你的密码" class="userpwd">
+                        <input type="password" name="" id="" placeholder="请再次输入密码" class="userpwd">
+                        <input type="button" name="" id="" value="注册" class="registerBtn">
+                    </div>
                 </div>
                 <div class="tabsAbove">
                     <span><img src="../image/login-qq.jpg" alt="">QQ快捷登录</span>
