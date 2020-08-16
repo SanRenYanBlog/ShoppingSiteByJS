@@ -330,10 +330,15 @@
         margin-bottom: 40px;
         margin-right: 20px;
         text-align: center;
-        img{
+        .goodsImg{
             width: 285px;
             height: 310px;
+            overflow: hidden;
+            img{
+                width: 285px;
+            }
         }
+        
         h2{
             color: #FF0000;
             font-size: 14px;

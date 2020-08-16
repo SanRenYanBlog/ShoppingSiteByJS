@@ -434,10 +434,18 @@
             .express{
                 overflow: hidden;
                 border-bottom: 1px dotted #ccc;
-                span,p,select{
+                span,p{
                     float: left;
                     line-height: 40px;
                     height: 40px;
+                }
+                select{
+                    float: left;
+                    width: 250px;
+                    height: 30px;
+                    outline: none;
+                    text-indent: 10px;
+                    margin-top: 5px;
                 }
                 p{
                     clear: left;
@@ -555,9 +563,14 @@
         width: 948px;
         .tab{
             position: relative;
-            height: 50px;
-            border-bottom: 1px solid #E9ECF0;
+            height: 52px;
+            border-bottom: 2px solid #E9ECF0;
+            
             p{
+                // border-top: 2px solid #FF6941;
+                // border-bottom: 2px solid #fff;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid #E9ECF0;
                 cursor: pointer;
                 line-height: 50px;
                 font-size: 16px;
@@ -565,6 +578,9 @@
                 float: left;
                 padding: 0 50px;
                 border-right: 1px solid #E9ECF0;
+                &:first-child{
+                    border-top: 2px solid #FF6941;
+                }
                 &:last-child{
                     border-right:none;
                 }
@@ -586,7 +602,7 @@
                 }
                 .buyBtn{
                     width: 160px;
-                    height: 50px;
+                    height: 52px;
                     background-color: #FF6941;
                     color: #FFF;
                     font-size: 24px;
@@ -597,7 +613,7 @@
         }
         .tabMain{
             .detailGood{
-                display: none;
+                // display: none;
                 padding: 45px 0;
                 width: 850px;
                 margin: 0 auto;
@@ -691,6 +707,7 @@
                 }
             }
             .detailEnsure{
+                display: none;
                 padding: 20px 20px 40px 20px;
                 .servertbs{
                     ul{
@@ -712,7 +729,7 @@
                                 text-align: center;
                                 display: block;
                                 font-size: 14px;
-                                color: 232628;
+                                color: #232628;
                             }
                             &:first-child:hover p{
                                 background-position: top -136px left 0;

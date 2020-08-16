@@ -299,10 +299,17 @@
     .details .productWrap .productRight .express {
       overflow: hidden;
       border-bottom: 1px dotted #ccc; }
-      .details .productWrap .productRight .express span, .details .productWrap .productRight .express p, .details .productWrap .productRight .express select {
+      .details .productWrap .productRight .express span, .details .productWrap .productRight .express p {
         float: left;
         line-height: 40px;
         height: 40px; }
+      .details .productWrap .productRight .express select {
+        float: left;
+        width: 250px;
+        height: 30px;
+        outline: none;
+        text-indent: 10px;
+        margin-top: 5px; }
       .details .productWrap .productRight .express p {
         clear: left; }
       .details .productWrap .productRight .express p:last-child {
@@ -390,9 +397,11 @@
     width: 948px; }
     .detailWrap .detailItem .tab {
       position: relative;
-      height: 50px;
-      border-bottom: 1px solid #E9ECF0; }
+      height: 52px;
+      border-bottom: 2px solid #E9ECF0; }
       .detailWrap .detailItem .tab p {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid #E9ECF0;
         cursor: pointer;
         line-height: 50px;
         font-size: 16px;
@@ -400,6 +409,8 @@
         float: left;
         padding: 0 50px;
         border-right: 1px solid #E9ECF0; }
+        .detailWrap .detailItem .tab p:first-child {
+          border-top: 2px solid #FF6941; }
         .detailWrap .detailItem .tab p:last-child {
           border-right: none; }
       .detailWrap .detailItem .tab .buy {
@@ -416,14 +427,13 @@
             font-size: 16px; }
         .detailWrap .detailItem .tab .buy .buyBtn {
           width: 160px;
-          height: 50px;
+          height: 52px;
           background-color: #FF6941;
           color: #FFF;
           font-size: 24px;
           border: none;
           cursor: pointer; }
     .detailWrap .detailItem .tabMain .detailGood {
-      display: none;
       padding: 45px 0;
       width: 850px;
       margin: 0 auto;
@@ -494,6 +504,7 @@
           .detailWrap .detailItem .tabMain .detailEvaluate ul li:last-child {
             border-bottom: none; }
     .detailWrap .detailItem .tabMain .detailEnsure {
+      display: none;
       padding: 20px 20px 40px 20px; }
       .detailWrap .detailItem .tabMain .detailEnsure .servertbs ul {
         overflow: hidden; }
@@ -513,7 +524,7 @@
             text-align: center;
             display: block;
             font-size: 14px;
-            color: 232628; }
+            color: #232628; }
           .detailWrap .detailItem .tabMain .detailEnsure .servertbs ul li:first-child:hover p {
             background-position: top -136px left 0; }
           .detailWrap .detailItem .tabMain .detailEnsure .servertbs ul li:nth-child(2):hover p {
