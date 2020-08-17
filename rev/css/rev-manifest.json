@@ -1,6 +1,8 @@
 {
   "clear.css": "clear-9c2fab188a.css",
-  "index.css": "index-4889e3fe03.css",
-  "login.css": "login-d41d8cd98f.css",
+  "goodlist.css": "goodlist-ce9354dce8.css",
+  "goodsDetails.css": "goodsDetails-18b2edc529.css",
+  "index.css": "index-e742ee2d0e.css",
+  "login.css": "login-599bd36ee6.css",
   "public.css": "public-227a457716.css"
 }

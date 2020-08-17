@@ -124,20 +124,21 @@ function judgeCookie(){
 function move(dom,target) {
     let opa = dom.style.opacity * 100;
     let timers = null;
+    let speed;
     timers && clearInterval(timers);
     timers = setInterval(function () {
         if (target > opa) {//运动方向
-            var speed = 2;//透明度增加
+            speed = 2;//透明度增加
         } else {
-            var speed = -2;//透明度减少
+            speed = -2;//透明度减少
         }
         // 剩余的运动量 < 每次所走的运动量
         if (Math.abs(opa - target) <= Math.abs(speed)) {
-            clearInterval(timer);//运动结束
+            clearInterval(timers);//运动结束
             dom.style.opacity = target / 100;//手动设置终点
         } else {
             opa += speed;
             dom.style.opacity = opa / 100;//每次的运动
         }
-    },30);
+    },10);
 }

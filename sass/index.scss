@@ -340,12 +340,13 @@
 }
 //banner  按钮样式
 .banner{
-    &:hover .bantoLeft,&:hover .bantoRight{
-        display: block;
-    }
+    
     .center{
         position: relative;
         overflow: hidden;
+        &:hover .bantoLeft,&:hover .bantoRight{
+            display: block;
+        }
     }
     .bantoLeft,.bantoRight{
         cursor: pointer;

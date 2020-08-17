@@ -4,53 +4,70 @@ let bantoRight = document.querySelector('.bantoRight');
 let banDotts = document.querySelectorAll('.banDotts span');
 let banImgs = document.querySelectorAll('.imgAll div');
 let timer = null;
+let timers = null;
 let nowIndex = 0;
 banDotts[nowIndex].className = 'checked';
-banImgs[nowIndex].style.opacity = '1';
+move(banImgs[nowIndex],'100');
 banMove();
 function banMove(){
     timer = setInterval(function(){ 
         banDotts[nowIndex].className = '';
-        banImgs[nowIndex].style.opacity = '0';
-        // move(banImgs[nowIndex],'0');
+        // banImgs[nowIndex].style.opacity = '0';
+        move(banImgs[nowIndex],'0');
         nowIndex++;
         nowIndex = nowIndex > 2 ? 0 : nowIndex++;
         banDotts[nowIndex].className = 'checked';
-        banImgs[nowIndex].style.opacity = '1';
-        // move(banImgs[nowIndex],'100');
-    },1000)
+        // banImgs[nowIndex].style.opacity = '1';
+        move(banImgs[nowIndex],'100');
+    },3000)
 }
 
-bantoLeft.addEventListener('click',clickHandler);
-bantoRight.addEventListener('click',clickHandler);
+bantoLeft.addEventListener('click',throttle);
+bantoRight.addEventListener('click',throttle);
 for(let i=0;i<banDotts.length;i++){
-    banDotts[i].addEventListener('click',clickHandler);
+    banDotts[i].addEventListener('click',throttle);
 }
+
+function throttle(e){
+    if(timers){
+        timers = null;
+        clickHandler(e);
+    }else{
+        clickHandler(e);
+        timers = setTimeout(function(){
+            timers = null;
+        },500)
+    }
+}
+
 function clickHandler(e){
     clearInterval(timer);
+    // clearInterval(timers);
     console.log(nowIndex);
     banDotts[nowIndex].className = '';
-    banImgs[nowIndex].style.opacity = '0';
+    // banImgs[nowIndex].style.opacity = '0';
+    move(banImgs[nowIndex],'0');
     if(e.target.className === 'bantoLeft'){
         nowIndex--;
         nowIndex = nowIndex < 0 ? banImgs.length-1 : nowIndex--;
         banDotts[nowIndex].className = 'checked';
-        banImgs[nowIndex].style.opacity = '1';
+        move(banImgs[nowIndex],'100');
     }
     if(e.target.className === 'bantoRight'){
         nowIndex++;
         nowIndex = nowIndex > banImgs.length-1 ? 0 : nowIndex++;
         banDotts[nowIndex].className = 'checked';
-        banImgs[nowIndex].style.opacity = '1';
+        move(banImgs[nowIndex],'100');
     }
     if(e.target.parentNode.className === 'banDotts'){
         for(let i=0;i<banDotts.length;i++){
             if(banDotts[i] === e.target){
                 banDotts[nowIndex].className = '';
-                banImgs[nowIndex].style.opacity = '0';
+                // banImgs[nowIndex].style.opacity = '0';
+                move(banImgs[nowIndex],'0');
                 nowIndex = i;
                 banDotts[nowIndex].className = 'checked';
-                banImgs[nowIndex].style.opacity = '1';
+                move(banImgs[nowIndex],'100');
             }
         }
     }

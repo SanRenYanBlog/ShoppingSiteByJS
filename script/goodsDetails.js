@@ -64,6 +64,7 @@ ajax({
         imgBox.innerHTML = ` <img src="${goodsObj.aidImg[0]}">`
 
         ChangeImg();
+        imgOptionsBorder()
     }
 })
 
@@ -172,3 +173,19 @@ function enterHandler(e){
     
 }
 
+
+
+//左侧四张图片外边框
+function imgOptionsBorder(){
+    let imgOptions = document.querySelector('.imgOption');
+    let imgOptionA = document.querySelectorAll('.imgOption div')[0];
+    let nowimgOption = imgOptionA;
+    nowimgOption.style.borderColor = '#FF734D';
+    imgOptions.onmouseover = function(e){
+        if(e.target.tagName === 'IMG' && e.target.parentNode!==nowimgOption){
+            e.target.parentNode.style.borderColor = '#FF734D';
+            nowimgOption.style.borderColor = 'transparent';
+            nowimgOption = e.target.parentNode;
+        }
+    }
+}

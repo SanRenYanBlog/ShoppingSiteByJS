@@ -1,5 +1,9 @@
 let loginStatus = document.querySelectorAll('.topRight ul li')[0];
 let registerStatus = document.querySelectorAll('.topRight ul li')[1];
+let hrefAll = location.href.split('/');
+hrefAll.pop();
+let href= hrefAll.join('/');
+// console.log();
 loginInit();
 
 function loginInit(){
@@ -130,7 +134,7 @@ function addUlData(type,target){
             if(jsonData[item].type===type){
                 let li = document.createElement('li');
                 li.onclick = function(){
-                    open(`http://127.0.0.1:5500/dist/pages/goodsDetails.html?id=${item}`);
+                    open(`${href}/goodsDetails.html?id=${item}`);
                 }
                 li.innerHTML+=`<div class="goodsImg">
                                             <img src="${jsonData[item].mainImg}">
@@ -148,7 +152,7 @@ function addUlData(type,target){
             if(jsonData[item].target===target){
                 let li = document.createElement('li');
                 li.onclick = function(){
-                    open(`http://127.0.0.1:5500/dist/pages/goodsDetails.html?id=${item}`);
+                    open(`${href}/goodsDetails.html?id=${item}`);
                 }
                 li.innerHTML+=`<div class="goodsImg">
                                             <img src="${jsonData[item].mainImg}">
@@ -165,7 +169,7 @@ function addUlData(type,target){
         for(let item in jsonData){
                 let li = document.createElement('li');
                 li.onclick = function(){
-                    open(`http://127.0.0.1:5500/dist/pages/goodsDetails.html?id=${item}`);
+                    open(`${href}/goodsDetails.html?id=${item}`);
                 }
                 li.innerHTML+=`<div class="goodsImg">
                                             <img src="${jsonData[item].mainImg}">
@@ -186,7 +190,7 @@ function addUlByArr(){
     showGoodsArr.forEach(function(item){
         let li = document.createElement('li');
         li.onclick = function(){
-            open(`http://127.0.0.1:5500/dist/pages/goodsDetails.html?id=${item.id}`);
+            open(`${href}/goodsDetails.html?id=${item.id}`);
         }
         li.innerHTML+=`<div class="goodsImg">
                                     <img src="${item.mainImg}">

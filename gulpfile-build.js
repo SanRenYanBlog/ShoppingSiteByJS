@@ -16,6 +16,13 @@ task('image', async ()=>{
   .pipe(dest('./dist/image'))
 })
 
+//处理JSON
+task('json', async ()=>{
+  src('./json/*.json')
+  .pipe(dest('./dist/json'))
+})
+
+
 // 处理sass
 task('sass', async ()=>{
   src('./sass/*.scss')
@@ -64,4 +71,4 @@ task('connect',async ()=>{
 })
 
 // 构建生产包
-task('build',series('delDist','image','sass','script','html','connect'))
+task('build',series('delDist','image','json','sass','script','html','connect'))
